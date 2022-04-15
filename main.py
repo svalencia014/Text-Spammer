@@ -1,4 +1,7 @@
-import pyautogui, time
+import pyautogui
+import time
+import sys
+
 def program():
     a = input("Do you want to spam?")
     def menu():
@@ -11,7 +14,7 @@ def program():
         if a == 'y':
             menu()
         else:
-            exit()
+            sys.exit()
     def preset():
         print("PLEASE SWITCH TO YOUR TEXT BOX NOW")
         x = open("jazz.txt", 'r')
