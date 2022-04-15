@@ -37,7 +37,6 @@ def program():
         q = input("do you want to repeat")
         if q == 'y':
             program()
-        else:sys.
-            exit()
+        else:						sys.exit()
     start()
 program()
