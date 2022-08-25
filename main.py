@@ -2,19 +2,23 @@ import pyautogui
 import time
 import sys
 
+
 def program():
-    a = input("Do you want to spam?")
+    a = input("Do you want to spam? ")
+
     def menu():
-        c = input("Do you want to 1) use your own text, or 2) use preset text?")
+        c = input("Do you want to 1) use your own text, or 2) use preset text? ")
         if c == '1':
             custom()
         else:
             preset()
+
     def start():
         if a == 'y':
             menu()
         else:
             sys.exit()
+
     def preset():
         print("PLEASE SWITCH TO YOUR TEXT BOX NOW")
         x = open("jazz.txt", 'r')
@@ -23,6 +27,7 @@ def program():
             pyautogui.typewrite(word)
             pyautogui.press("enter")
         restart()
+
     def custom():
         x = input("What is the text you want to spam?")
         y = input("How many times do you want to spam?")
@@ -33,11 +38,15 @@ def program():
             pyautogui.typewrite(x)
             pyautogui.press("enter")
         restart()
+
     def restart():
-        q = input("do you want to repeat")
+        q = input("Do you want to repeat? ")
         if q == 'y':
             program()
         else:
-			sys.exit()
+            sys.exit()
+
     start()
+
+
 program()
